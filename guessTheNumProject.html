@@ -1,0 +1,30 @@
+<h1>Guess the Number project</h1>
+<input id="num">
+<button onclick="resultt()">check</button>
+<p id="result">result</p>
+<p id="score">score:10</p>
+
+<script>
+    var val=document.getElementById("num");
+    var result=document.getElementById("result");
+    var score=document.getElementById("score");
+    var tScore=10;
+
+    function resultt(){
+        var Gnum=num.value;
+        var RanVal=Math.floor((Math.random()*10)+1);
+        if(Gnum==RanVal){
+            console.log("right");
+            result.textContent="right";
+            alert("right");
+        }else{
+            console.log("wrong");
+            result.textContent="wrong";
+            tScore=tScore-1;
+            score.textContent="score"+tScore;
+            
+        }
+    }
+
+
+</script>
